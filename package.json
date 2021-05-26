@@ -1,0 +1,44 @@
+{
+  "name": "original-cafe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:yukisagara/original-cafe.git",
+  "author": "yuki_sagara <sagara@impv.co.jp>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "browserify": "^17.0.0",
+    "eslint": "^7.27.0",
+    "fibers": "^5.0.0",
+    "jquery": "^3.6.0",
+    "npm-run-all": "^4.1.5",
+    "nunjucks-cli": "^1.0.0",
+    "sass": "^1.34.0",
+    "watchify": "^4.0.0"
+  },
+  "dependencies": {
+    "http-server": "^0.12.3"
+  },
+  "scripts": {
+    "start": "npm-run-all -p build:* eslint",
+    "dev": "npm-run-all -p build:* watch:* server eslint",
+    "build:html": "nunjucks '**/*.html' -p ./src/html/ -o ./build",
+    "build:scss": "sass ./src/scss/style.scss ./build/css/style.css",
+    "build:js": "browserify ./src/js/index.js -o ./build/js/script.js",
+    "build:static": "cp -p -r ./src/static/ ./build",
+    "watch:html": "nunjucks '**/*.html' -p ./src/html/ -o ./build -w",
+    "watch:scss": "sass --watch ./src/scss/style.scss ./build/css/style.css",
+    "watch:js": "watchify ./src/js/index.js -o ./build/js/script.js",
+    "server": "http-server ./build -p 3000",
+    "eslint": "eslint ./src/js/*.js"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true
+    }
+  }
+}
