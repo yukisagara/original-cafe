@@ -5,3 +5,20 @@
 @import "base/variables";
 @import "base/mixins";
 @import "base/base";
+
+// ------------------------------------
+// common
+// ------------------------------------
+@import "common/button";
+@import "common/section";
+
+// ------------------------------------
+// component
+// ------------------------------------
+@import "component/header";
+@import "component/footer";
+
+// ------------------------------------
+// page
+// ------------------------------------
+@import "page/top";

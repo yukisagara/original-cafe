@@ -8,15 +8,16 @@ html{
     font-size: 62.5%;
 }
 body{
-    color: $black;
+    color: $base;
     background-color: $white;
-    font-family: $font_family;
+    font-family: $font;
+    font-weight: 500;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.72;
-    letter-spacing: 0.05rem;
+    line-height: 2;
+    letter-spacing: 0.1rem;
     -webkit-text-size-adjust: 100%;
     overflow-x: hidden;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     position: relative;
 }
 img{
@@ -25,4 +26,9 @@ img{
 }
 a{
     text-decoration: none;
+    color: $base;
+    transition: color 0.3s;
+    &:hover{
+        text-decoration: underline;
+    }
 }
