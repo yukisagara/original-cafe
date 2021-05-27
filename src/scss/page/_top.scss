@@ -3,8 +3,13 @@ top
 ---------------*/
 .mv{
     position: relative;
-    margin: 40px;
-    width: calc(100vw - 80px);
+    padding: 40px;
+    @include sp{
+        padding: 20px;
+    }
+    &__img-wrap{
+        position: relative;
+    }
     &__img{
         font-size: 0;
         &.large{
@@ -25,11 +30,18 @@ top
 .top-news{
     position: absolute;
     background-color: $white;
-    bottom: -40px;
-    left: -1px;
+    bottom: 0;
+    left: 40px;
     width: 40%;
     min-width: 480px;
     padding: 16px 24px;
+    @include sp{
+        position: static;
+        width: 100%;
+        padding: 24px 0;
+        min-width: auto;
+        margin-top: 40px;
+    }
     &__title{
         font-family: $font_en;
         font-weight: 600;
@@ -42,22 +54,50 @@ top
         align-items: flex-end;
         justify-content: space-between;
         margin-bottom: 8px;
+        @include sp{
+            margin-bottom: 16px;
+        }
     }
     &__item{
         display: flex;
+        flex-direction: row;
         align-items: center;
+        &:not(:last-of-type){
+            margin-bottom: 4px;
+        }
+        @include sp{
+            flex-direction: column;
+            align-items: flex-start;
+        }
         .date{
             font-size: 1.2rem;
             font-weight: 600;
             font-family: $font_en;
             width: 64px;
+            @include sp{
+                width: auto;
+                color: $brown;
+                line-height: 1.5;
+            }
         }
         .title{
-
+            @include sp{
+                width: 100%;
+                font-weight: 700;
+            }
+            a{
+                @include sp{
+                    display: block;
+                }
+            }
             &:before{
                 color: $brown;
                 content: '|';
                 padding: 0 16px;
+                @include sp{
+                    content:'';
+                    padding: 0;
+                }
             }
         }
     }
@@ -68,14 +108,24 @@ top
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
+        @include sp{
+            flex-direction: column;
+        }
     }
     &__logo{
         width: 280px;
         margin-right: 80px;
+        @include sp{
+            width: 80%;
+            margin: auto;
+        }
     }
     &__text{
         width: calc(100% - 360px);
         text-align: left;
+        @include sp{
+            width: 100%;
+        }
     }
 }
 .access{
@@ -83,23 +133,38 @@ top
     .section__inner{
         position: relative;
     }
-    &__main{
+    &__wrap{
         background-color: $white;
         padding: 40px;
         width: 48%;
         position: relative;
         z-index: 1;
+        @include sp{
+            width: 100%;
+            padding: 20px;
+        }
         .map{
             font-size: 0;
             margin-bottom: 24px;
+            @include sp{
+                margin-bottom: 16px;
+                text-align: center;
+            }
         }
         p{
             &:not(:last-of-type){
                 margin-bottom: 16px;
+                @include sp{
+                    margin-bottom: 8px;
+                }
             }
         }
         .caution{
             font-size: 1.2rem;
+            @include sp{
+                font-size: 1.1rem;
+                line-height: 1.5;
+            }
             &--block{
                 display: block;
             }
@@ -113,6 +178,15 @@ top
         z-index: 0;
         font-size: 0;
         transform: translateY(calc(-50% + 40px));
+        @include sp{
+            position: static;
+            margin: -40px -20px 20px;
+            height: 180px;
+            width: calc(100% + 40px);
+            transform: translateY(0);
+            background: url('../img/access_01.jpg') no-repeat center;
+            background-size: cover;
+        }
     }
 }
 .store{
@@ -125,18 +199,39 @@ top
         align-items: center;
         justify-content: space-between;
         margin-bottom: 56px;
+        @include sp{
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
         &:nth-child(even){
             flex-direction: row-reverse;
             margin-bottom: 0;
+            @include sp{
+                flex-direction: column;
+                align-items: flex-end;
+                margin-bottom: 0;
+            }
         }
     }
     &__img{
         width: calc(60% - 40px);
+        font-size: 0;
+        @include sp{
+            width: 80%;
+            margin-bottom: 16px;
+        }
     }
     &__text{
         width: 40%;
+        @include sp{
+            width: 100%;
+        }
         p:not(:last-of-type){
             margin-bottom: 16px;
+            @include sp{
+                margin-bottom: 8px;
+            }
         }
     }
     &__title{
@@ -146,6 +241,10 @@ top
         position: relative;
         display: inline-block;
         margin-bottom: 16px;
+        @include sp{
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
         &:after{
             content:'';
             display: block;
@@ -157,6 +256,11 @@ top
             top: 50%;
             transform: translateY(-50%);
             right: -176px;
+            @include sp{
+                width: 128px;
+                height: 40px;
+                right: -132px;
+            }
         }
     }
 }
