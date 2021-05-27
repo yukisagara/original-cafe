@@ -1,10 +1,16 @@
 /*
 variables
 ---------------*/
-$black: #000000;
+$base: #261919;
 $white: #ffffff;
+$bg: #F4F2F0;
+$brown: #B78671;
+$border: #D2C6BF;
+$input: #B7B0B0;
 
-$font_family: 'open sans','Noto Sans JP', sans-serif;
+$font: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",'Noto Sans JP', "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+$font_en: 'Barlow Semi Condensed', sans-serif;
+$font_btn: 'Barlow Semi Condensed',"游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",'Noto Sans JP', "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 
 $breakpoint_m: 960px;
 $breakpoint_s: 740px;
