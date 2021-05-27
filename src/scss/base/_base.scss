@@ -19,6 +19,9 @@ body{
     overflow-x: hidden;
     font-size: 1.5rem;
     position: relative;
+    @include sp{
+        font-size: 1.3rem;
+    }
 }
 img{
     max-width: 100%;
@@ -30,5 +33,17 @@ a{
     transition: color 0.3s;
     &:hover{
         text-decoration: underline;
+    }
+}
+.pc{
+    display: block;
+    @include sp{
+        display: none;
+    }
+}
+.sp{
+    display: none;
+    @include sp{
+        display: block;
     }
 }

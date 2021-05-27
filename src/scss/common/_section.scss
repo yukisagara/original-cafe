@@ -5,6 +5,9 @@ section
     &__inner{
         margin: auto;
         padding: 60px 0 80px;
+        @include sp{
+            padding: 40px 20px;
+        }
         &.small{
             max-width: 960px;
         }
@@ -14,6 +17,9 @@ section
         &.large{
             max-width: 1360px;
             padding: 60px 40px 80px;
+            @include sp{
+                padding: 40px 20px;
+            }
         }
     }
     &__title{
@@ -23,6 +29,9 @@ section
         line-height: 1;
         text-align: center;
         margin-bottom: 40px;
+        @include sp{
+            margin-bottom: 24px;
+        }
         span{
             position: relative;
             display: inline-block;
@@ -46,6 +55,9 @@ section
         text-align: center;
         p:not(:last-of-type){
             margin-bottom: 24px;
+            @include sp{
+                margin-bottom: 8px;
+            }
         }
     }
 }

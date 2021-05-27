@@ -23,6 +23,9 @@ button
             bottom: -1px;
             left: 0;
             transition: width 0.3s;
+            @include sp{
+                width: 100%;
+            }
         }
         &:hover{
             &:before{
@@ -42,9 +45,18 @@ button
         background-color: rgba(183, 134, 113, 0);
         text-align: center;
         position: relative;
+        @include sp{
+            width: 100%;
+            padding: 24px;
+            margin: 24px auto 0;
+        }
         &--small{
             width: 400px;
             padding: 24px;
+            @include sp{
+                width: 100%;
+                padding: 24px;
+            }
         }
         &:after{
             content:'';
@@ -58,6 +70,9 @@ button
             right: 32px;
             transform: translateY(-50%);
             transition: right 0.3s;
+            @include sp{
+                right: 24px;
+            }
         }
         &:hover{
             &:after{
