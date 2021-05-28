@@ -5,6 +5,9 @@ section
     &__inner{
         margin: auto;
         padding: 60px 0 80px;
+        @include sp{
+            padding: 40px 20px;
+        }
         &.height-full{
             min-height: calc(100vh - 62px);
             @include sp{
