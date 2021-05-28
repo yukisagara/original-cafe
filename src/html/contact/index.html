@@ -1,0 +1,39 @@
+{% extends "../layout/_layout.html" %}
+{% block body %}
+<section class="section contact bg">
+    <div class="section__inner small height-full">
+        <div class="contact__wrap">
+            <h2 class="section__title"><span class="text">Contact</span></h2>
+            <p class="section__desc">焙煎豆の販売状況や、イベント出店等のご相談等、<br class="pc">コーヒーに関わることでしたら何でもお気軽にご相談ください。</p>
+            <form action="">
+                <ul class="contact__list">
+                    <li class="contact__item">
+                        <p class="contact__label required">お名前</p>
+                        <input class="contact__input text" type="text" id="name" placeholder="馬込 花子" required>
+                    </li>
+                    <li class="contact__item">
+                        <p class="contact__label required">メールアドレス</p>
+                        <input class="contact__input text" type="email" id="name" placeholder="magomecoffe@example.com" required>
+                    </li>
+                    <li class="contact__item">
+                        <p class="contact__label">お問い合わせの内容<span class="small">（複数選択可）</span></p>
+                        <ul class="contact__checkbox-list">
+                            <li class="contact__input checkbox"><input type="checkbox" name="form-check" id="shop"><label class="form-check" for="shop">店内利用について</label></li>
+                            <li class="contact__input checkbox"><input type="checkbox" name="form-check" id="coffe"><label class="form-check" for="coffe">コーヒー豆について</label></li>
+                            <li class="contact__input checkbox"><input type="checkbox" name="form-check" id="gift"><label class="form-check" for="gift">ギフト等の発送について</label></li>
+                            <li class="contact__input checkbox"><input type="checkbox" name="form-check" id="event"><label class="form-check" for="event">イベント出店について</label></li>
+                            <li class="contact__input checkbox"><input type="checkbox" name="form-check" id="course"><label class="form-check" for="course">コーヒー専門講習について</label></li>
+                            <li class="contact__input checkbox"><input type="checkbox" name="form-check" id="other"><label class="form-check" for="other">その他</label></li>
+                        </ul>
+                    </li>
+                    <li class="contact__item">
+                        <p class="contact__label required">メッセージ本文</p>
+                        <textarea class="contact__input textarea" placeholder="お問い合わせ内容を記入してください。" required></textarea>
+                    </li>
+                </ul>
+                <button class="btn btn__arrow btn__arrow--small" type="submit">送信する</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
