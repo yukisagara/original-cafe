@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "../component/_head.html" %}
+</head>
+<body>
+    <main class="wrapper">
+        <section class="section news bg">
+            <div class="section__inner small height-full">
+                <div class="news__wrap">
+                    <div class="news__detail">
+                    {% block body %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% include "../component/_footer.html" %}
+    </main>
+</body>
+</html>

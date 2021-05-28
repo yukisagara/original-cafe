@@ -5,8 +5,12 @@ section
     &__inner{
         margin: auto;
         padding: 60px 0 80px;
-        @include sp{
-            padding: 40px 20px;
+        &.height-full{
+            min-height: calc(100vh - 62px);
+            @include sp{
+                padding: 40px 20px;
+                min-height: calc(100vh - 58px);
+            }
         }
         &.small{
             max-width: 960px;
@@ -32,7 +36,7 @@ section
         @include sp{
             margin-bottom: 24px;
         }
-        span{
+        .text{
             position: relative;
             display: inline-block;
             z-index: 1;
@@ -48,6 +52,10 @@ section
                 opacity: 0.4;
             }
         }
+        .ja{
+            font-family: $font;
+            font-size: 2.8rem;
+        }
     }
     &__desc{
         font-weight: 700;
@@ -59,5 +67,8 @@ section
                 margin-bottom: 8px;
             }
         }
+    }
+    &.bg{
+        background-color: $bg;
     }
 }
