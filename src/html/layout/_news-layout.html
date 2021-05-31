@@ -4,13 +4,12 @@
     {% include "../component/_head.html" %}
 </head>
 <body>
-    <main class="wrapper">
+    <main class="wrapper child-page">
+        {% include "../component/_header.html" %}
         <section class="section news bg">
             <div class="section__inner small height-full">
                 <div class="news__wrap">
-                    <div class="news__detail">
                     {% block body %}{% endblock %}
-                    </div>
                 </div>
             </div>
         </section>
