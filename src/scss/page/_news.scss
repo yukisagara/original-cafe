@@ -2,14 +2,6 @@
 news
 ---------------*/
 .news{
-    &__wrap{
-        background-color: $white;
-        padding: 40px 80px;
-        border-radius: 2px;
-        @include sp{
-            padding: 20px;
-        }
-    }
     &__item{
         display: flex;
         flex-direction: row;
@@ -46,9 +38,8 @@ news
 .news-detail{
     &__header{
         padding-bottom: 8px;
-        border-bottom: 1px solid $brown;
+        border-bottom: 1px solid $border;
         width: 100%;
-        margin-bottom: 40px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -59,10 +50,10 @@ news
             align-items: flex-start;
         }
         .title{
-            font-weight: 700;
-            font-size: 1.6rem;
+            font-weight: 600;
+            font-size: 2rem;
             @include sp{
-                font-size: 1.4rem;
+                font-size: 1.6rem;
             }
         }
         .date{
@@ -73,17 +64,20 @@ news
         }
     }
     &__main{
-        font-size: 1.4rem;
+        margin: 40px auto;
         @include sp{
-            font-size: 1.2rem;
+            margin: 24px auto;
+        }
+    }
+    &__footer{
+        text-align: left;
+        @include sp{
+            text-align: center;
         }
     }
     .paragraph{
         &:not(:last-of-type){
             margin-bottom: 16px;
-            @include sp{
-                margin-bottom: 8px;
-            }
         }
     }
     ul{
