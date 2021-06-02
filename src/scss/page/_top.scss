@@ -4,8 +4,10 @@ top
 .mv{
     position: relative;
     padding: 40px;
+    margin-top: -40px;
     @include sp{
         padding: 20px;
+        margin-top: -20px;
     }
     &__img-wrap{
         position: relative;
