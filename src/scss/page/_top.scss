@@ -14,12 +14,21 @@ top
         font-size: 0;
         &.large{
             width: 75%;
+            @include sp{
+                width: 100%;
+            }
         }
         &.small{
             position: absolute;
             bottom: -40px;
             right: 0;
             width: 30%;
+            @include sp{
+                position: static;
+                width: 60%;
+                margin-left: auto;
+                margin-top: 20px;
+            }
         }
         img{
             width: 100%;
@@ -38,9 +47,9 @@ top
     @include sp{
         position: static;
         width: 100%;
-        padding: 24px 0;
+        padding: 0;
         min-width: auto;
-        margin-top: 40px;
+        margin-top: 20px;
     }
     &__title{
         font-family: $font_en;
@@ -103,6 +112,11 @@ top
     }
 }
 .intro{
+    .section__inner{
+        @include sp{
+            padding: 0 20px 20px;
+        }
+    }
     &__wrap{
         display: flex;
         align-items: center;
@@ -116,8 +130,8 @@ top
         width: 280px;
         margin-right: 80px;
         @include sp{
-            width: 80%;
-            margin: auto;
+            width: 60%;
+            margin: 0 auto 20px;
         }
     }
     &__text{
@@ -190,7 +204,10 @@ top
 }
 .store{
     &__list{
-        margin-top: 40px;
+        margin-top: 60px;
+        @include sp{
+            margin-top: 40px;
+        }
     }
     &__item{
         display: flex;

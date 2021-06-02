@@ -47,3 +47,8 @@ a{
         display: block;
     }
 }
+.wrapper{
+    &.child-page{
+        background-color: $bg;
+    }
+}

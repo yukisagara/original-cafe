@@ -1,0 +1,42 @@
+/*
+nav
+---------------*/
+.nav{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $white;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+    &.active{
+        visibility: visible;
+        opacity: 1;
+    }
+    &__wrap{
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+    &__list{
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-60%);
+        @include sp{
+            transform: translateY(-50%);
+        }
+    }
+    &__item{
+        font-family: $font_en;
+        text-align: center;
+        &:not(:last-of-type){
+            margin-bottom: 24px;
+        }
+    }
+}

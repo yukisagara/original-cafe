@@ -42,58 +42,58 @@ news
             border-bottom: 1px solid $border;
         }
     }
-    &__detail{
-        .header{
-            padding-bottom: 8px;
-            border-bottom: 1px solid $brown;
-            width: 100%;
-            margin-bottom: 40px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            @include sp{
-                margin-bottom: 24px;
-                flex-direction: column-reverse;
-                align-items: flex-start;
-            }
-            .title{
-                font-weight: 700;
-                font-size: 1.6rem;
-                @include sp{
-                    font-size: 1.4rem;
-                }
-            }
-            .date{
-                font-family: $font_en;
-                @include sp{
-                    color:$brown;
-                }
-            }
+}
+.news-detail{
+    &__header{
+        padding-bottom: 8px;
+        border-bottom: 1px solid $brown;
+        width: 100%;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        @include sp{
+            margin-bottom: 24px;
+            flex-direction: column-reverse;
+            align-items: flex-start;
         }
-        .main{
-            font-size: 1.4rem;
-            @include sp{
-                font-size: 1.2rem;
-            }
-        }
-        .paragraph{
-            &:not(:last-of-type){
-                margin-bottom: 16px;
-                @include sp{
-                    margin-bottom: 8px;
-                }
-            }
-        }
-        ul{
-            margin: 8px;
-            list-style: none;
-            @include sp{
-                margin: 4px;
-            }
-        }
-        .sub-title{
+        .title{
             font-weight: 700;
+            font-size: 1.6rem;
+            @include sp{
+                font-size: 1.4rem;
+            }
         }
+        .date{
+            font-family: $font_en;
+            @include sp{
+                color:$brown;
+            }
+        }
+    }
+    &__main{
+        font-size: 1.4rem;
+        @include sp{
+            font-size: 1.2rem;
+        }
+    }
+    .paragraph{
+        &:not(:last-of-type){
+            margin-bottom: 16px;
+            @include sp{
+                margin-bottom: 8px;
+            }
+        }
+    }
+    ul{
+        margin: 8px;
+        list-style: none;
+        @include sp{
+            margin: 4px;
+        }
+    }
+    .sub-title{
+        font-weight: 700;
     }
 }
