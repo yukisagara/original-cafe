@@ -20,6 +20,9 @@ $(function(){
             }
         }]
     });
+    $('#submitBtn').on('click',function(){
+        alert('フォームは実装できていません(•௰•; )');
+    });
 });
 
 window.onload = function() {
