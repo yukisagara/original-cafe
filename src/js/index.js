@@ -16,7 +16,8 @@ $(function(){
         responsive: [{
             breakpoint: 740,
             settings: {
-              slidesToShow: 3
+              slidesToShow: 3,
+              swipe: true
             }
         }]
     });
