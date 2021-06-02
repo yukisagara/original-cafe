@@ -1,6 +1,26 @@
 "use strict";
 
 const $ = require("jquery");
+const slick = require("slick-carousel");
+
+$(function(){
+    $('#slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 10000,
+        arrows: false,
+        cssEase: 'linear',
+        dots: false,
+        responsive: [{
+            breakpoint: 740,
+            settings: {
+              slidesToShow: 3
+            }
+        }]
+    });
+});
 
 window.onload = function() {
     const navBtn = document.getElementById('navTrigger');
