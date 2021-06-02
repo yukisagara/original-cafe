@@ -139,4 +139,34 @@ button
             }
         }
     }
+    &__back{
+        position: relative;
+        margin-left: 40px;
+        font-size: 1.4rem;
+        display: inline-block;
+        @include sp{
+            transform: translateX(-10px);
+        }
+        &:before{
+            content:'';
+            display: block;
+            position: absolute;
+            width: 32px;
+            height: 16px;
+            background: url('../img/icon_arrow_left.svg') no-repeat center;
+            background-size: contain;
+            top: 50%;
+            left: -40px;
+            transform: translateY(-50%);
+            transition: left 0.3s;
+            @include sp{
+                left: -40px;
+            }
+        }
+        &:hover{
+            &:before{
+                left: -44px;
+            }
+        }
+    }
 }

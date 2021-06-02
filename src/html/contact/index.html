@@ -1,11 +1,11 @@
-{% extends "../layout/_child-layout.html" %}
+{% extends "../layout/_layout.html" %}
 {% block body %}
-<section class="section contact bg">
+<section class="section contact">
     <div class="section__inner small height-full">
         <div class="contact__wrap">
-            <h2 class="section__title"><span class="text">Contact</span></h2>
-            <p class="section__desc">焙煎豆の販売状況や、イベント出店等のご相談等、<br class="pc">コーヒーに関わることでしたら何でもお気軽にご相談ください。</p>
-            <form action="">
+            <h2 class="section__title contact-page"><span class="text">Contact</span></h2>
+            <p class="section__desc contact-page">焙煎豆の販売状況や、イベント出店等のご相談等、<br class="pc">コーヒーに関わることでしたら何でもお気軽にご相談ください。</p>
+            <form class="contact__form" action="">
                 <ul class="contact__list">
                     <li class="contact__item">
                         <p class="contact__label required">お名前</p>
@@ -33,6 +33,9 @@
                 </ul>
                 <button class="btn btn__arrow btn__arrow--small" type="submit">送信する</button>
             </form>
+            <div class="contact__footer">
+                <a href="/" class="btn btn__back">Back to Top</a>
+            </div>
         </div>
     </div>
 </section>

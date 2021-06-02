@@ -10,10 +10,10 @@ section
         }
         &.height-full{
             min-height: calc(100vh - 62px);
-            padding: 0 0 80px;
+            padding: 20px 0 80px;
             @include sp{
-                padding: 0 20px;
                 min-height: calc(100vh - 120px);
+                padding: 16px 20px 40px
             }
         }
         &.small{
@@ -40,6 +40,13 @@ section
         @include sp{
             margin-bottom: 24px;
         }
+        &.contact-page{
+            text-align: left;
+            margin-bottom: 32px;
+            @include sp{
+                margin-bottom: 24px;
+            }
+        }
         .text{
             position: relative;
             display: inline-block;
@@ -65,6 +72,14 @@ section
         font-weight: 700;
         letter-spacing: 0.12rem;
         text-align: center;
+        &.contact-page{
+            text-align: left;
+            padding-bottom: 32px;
+            border-bottom: 1px solid $border;
+            @include sp{
+                padding-bottom: 24px;
+            }
+        }
         p:not(:last-of-type){
             margin-bottom: 24px;
             @include sp{

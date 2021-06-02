@@ -4,8 +4,10 @@ top
 .mv{
     position: relative;
     padding: 40px;
+    margin-top: -40px;
     @include sp{
         padding: 20px;
+        margin-top: -20px;
     }
     &__img-wrap{
         position: relative;
@@ -41,72 +43,46 @@ top
     background-color: $white;
     bottom: 0;
     left: 40px;
-    width: 40%;
     min-width: 480px;
-    padding: 16px 24px;
+    padding: 24px;
     @include sp{
+        background-color: $bg;
         position: static;
         width: 100%;
-        padding: 0;
+        padding: 16px;
+        border-radius: 4px;
         min-width: auto;
-        margin-top: 20px;
-    }
-    &__title{
-        font-family: $font_en;
-        font-weight: 600;
-        font-size: 2.4rem;
-        line-height: 1;
-    }
-    &__head{
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: space-between;
-        margin-bottom: 8px;
-        @include sp{
-            margin-bottom: 16px;
-        }
+        margin: 20px 0;
     }
     &__item{
+        position: relative;
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        &:not(:last-of-type){
-            margin-bottom: 4px;
+        opacity: 1;
+        transition: opacity 0.3s;
+        width: 480px;
+        &:hover{
+            text-decoration: none;
+            opacity: 0.7;
         }
         @include sp{
-            flex-direction: column;
+            flex-direction: column-reverse;
             align-items: flex-start;
+            width: 100%;
+        }
+        .title{
+            font-weight: 500;
+            font-size: 1.5rem;
         }
         .date{
             font-size: 1.2rem;
             font-weight: 600;
             font-family: $font_en;
-            width: 64px;
             @include sp{
                 width: auto;
                 color: $brown;
-                line-height: 1.5;
-            }
-        }
-        .title{
-            @include sp{
-                width: 100%;
-                font-weight: 700;
-            }
-            a{
-                @include sp{
-                    display: block;
-                }
-            }
-            &:before{
-                color: $brown;
-                content: '|';
-                padding: 0 16px;
-                @include sp{
-                    content:'';
-                    padding: 0;
-                }
             }
         }
     }

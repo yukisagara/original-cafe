@@ -2,7 +2,7 @@
 header
 ---------------*/
 .header{
-    background-color: rgba(255,255,255,0);
+    background-color: rgba(255,255,255,0.8);
     transition: background-color 0.2s;
     position: sticky;
     top: 0;
@@ -12,9 +12,6 @@ header
     flex-direction: row;
     justify-content: space-between;
     z-index: 100;
-    &.bg{
-        background-color: rgba(255,255,255,0.8);
-    }
     &__logo{
         height: 48px;
         a{
